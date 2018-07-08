@@ -8,7 +8,7 @@
 [ext_resource path="res://GFX/Players/bunny2_walk2.png" type="Texture" id=6]
 [ext_resource path="res://GFX/Players/bunny2_hurt.png" type="Texture" id=7]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
@@ -32,35 +32,36 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=2]
 
 custom_solver_bias = 0.0
 radius = 60.0
-height = 35.0
+height = 36.0826
 
 [node name="Player" type="KinematicBody2D" index="0"]
 
-position = Vector2( 511, 248.54 )
+position = Vector2( -4.07077, 10.813 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
-frames = SubResource( 2 )
-animation = "run"
-frame = 1
+frames = SubResource( 1 )
+animation = "idle"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( -0.125, 24.0001 )
-shape = SubResource( 1 )
+visible = false
+position = Vector2( -0.125, 23.7457 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 
