@@ -5,34 +5,7 @@
 [ext_resource path="res://GFX/Background/bg_layer3.png" type="Texture" id=3]
 [ext_resource path="res://GFX/Background/bg_layer4.png" type="Texture" id=4]
 
-[node name="Camera2D" type="Camera2D" index="0"]
-
-position = Vector2( 957.443, 538.972 )
-anchor_mode = 1
-rotating = false
-current = true
-zoom = Vector2( 1, 1 )
-limit_left = -10000000
-limit_top = -10000000
-limit_right = 10000000
-limit_bottom = 4000
-limit_smoothed = false
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-smoothing_enabled = true
-smoothing_speed = 5.0
-offset_v = 0.0
-offset_h = 0.0
-drag_margin_left = 0.2
-drag_margin_top = 0.2
-drag_margin_right = 0.2
-drag_margin_bottom = 0.2
-editor_draw_screen = true
-editor_draw_limits = false
-editor_draw_drag_margin = false
-_sections_unfolded = [ "Limit", "Smoothing" ]
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
+[node name="ParallaxBackground" type="ParallaxBackground" index="0"]
 
 layer = -1
 offset = Vector2( 0, 0 )
@@ -47,53 +20,53 @@ scroll_limit_end = Vector2( 0, 0 )
 scroll_ignore_camera_zoom = true
 _sections_unfolded = [ "Scroll" ]
 
-[node name="Background" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+[node name="Background" type="ParallaxLayer" parent="." index="0"]
 
 motion_scale = Vector2( 1, 1 )
 motion_offset = Vector2( 0, 0 )
 motion_mirroring = Vector2( 2048, 2048 )
 _sections_unfolded = [ "Motion" ]
 
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/Background" index="0"]
+[node name="Sprite" type="Sprite" parent="Background" index="0"]
 
 texture = ExtResource( 1 )
 centered = false
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" index="1"]
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="." index="1"]
 
-motion_scale = Vector2( 0.6, 1 )
+motion_scale = Vector2( 0.2, 1 )
 motion_offset = Vector2( 0, -500 )
 motion_mirroring = Vector2( 2048, 0 )
 _sections_unfolded = [ "Material", "Motion", "Transform", "Visibility", "Z Index" ]
 
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2" index="0"]
+[node name="Sprite" type="Sprite" parent="ParallaxLayer2" index="0"]
 
 texture = ExtResource( 2 )
 centered = false
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground" index="2"]
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="." index="2"]
 
-motion_scale = Vector2( 0.8, 1 )
+motion_scale = Vector2( 0.7, 1 )
 motion_offset = Vector2( 0, -500 )
 motion_mirroring = Vector2( 2048, 0 )
 _sections_unfolded = [ "Motion" ]
 
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3" index="0"]
+[node name="Sprite" type="Sprite" parent="ParallaxLayer3" index="0"]
 
 texture = ExtResource( 3 )
 centered = false
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground" index="3"]
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="." index="3"]
 
-motion_scale = Vector2( 1, 1 )
+motion_scale = Vector2( 1.25, 1 )
 motion_offset = Vector2( 0, -500 )
 motion_mirroring = Vector2( 2048, 0 )
 _sections_unfolded = [ "Motion" ]
 
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer4" index="0"]
+[node name="Sprite" type="Sprite" parent="ParallaxLayer4" index="0"]
 
 texture = ExtResource( 4 )
 centered = false

@@ -8,19 +8,22 @@
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 0, 0 )
+position = Vector2( 715.313, 791.759 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "collision" ]
 
 [node name="Camera2D" parent="Player" index="2" instance=ExtResource( 2 )]
 
-position = Vector2( -5.67322, 0.546387 )
-scale = Vector2( 4.36525, 2.91016 )
+position = Vector2( 1.79022, 7.25623 )
+scale = Vector2( 1.82413, 1.9507 )
 zoom = Vector2( 1.5, 1.5 )
-_sections_unfolded = [ "Offset", "Smoothing" ]
+limit_left = 320
+limit_bottom = 3260
+limit_smoothed = true
+_sections_unfolded = [ "Drag Margin", "Limit", "Offset", "Smoothing" ]
 
 [node name="TileMap" type="TileMap" parent="." index="1"]
 
-position = Vector2( 0.447021, -4.93591 )
+position = Vector2( -419.42, 1.26905 )
 mode = 0
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 64, 64 )
@@ -37,6 +40,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 131140, 3, 0, 131154, 7, 0, 327725, 5, 0, 393225, 5, 0, 589821, 1, 0, 589860, 1, 0, 589889, 7, 0, 720950, 1, 0, 720973, 3, 0, 786456, 5, 0, 917516, 1, 0, 1114162, 5, 0, 1245263, 7, 0, 1376278, 1, 0, 1376296, 1, 0, 1376320, 3, 0, 1507331, 1, 0, 1638452, 1, 0, 1638486, 3, 0, 1900614, 7, 0, 1966122, 5, 0, 2097182, 1, 0, 2162747, 3, 0 )
+tile_data = PoolIntArray( 64, 5, 0, 196663, 1, 0, 327724, 1, 0, 327748, 1, 0, 393246, 5, 0, 524323, 1, 0, 589847, 1, 0, 589876, 5, 0, 655418, 1, 0, 852012, 1, 0, 852041, 1, 0, 917519, 1, 0, 983106, 5, 0, 1048601, 5, 0, 1114146, 1, 0, 1245245, 5, 0, 1310770, 1, 0, 1376274, 1, 0, 1441864, 1, 0, 1572891, 1, 0, 1638439, 1, 0, 1703986, 5, 0, 1769532, 1, 0 )
+_sections_unfolded = [ "Cell" ]
 
 
