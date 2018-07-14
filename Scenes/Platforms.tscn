@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://GFX/Environment/ground_cake.png" type="Texture" id=1]
 [ext_resource path="res://GFX/Environment/ground_grass.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://GFX/Environment/ground_cake_small.png" type="Texture" id=5]
 [ext_resource path="res://GFX/Environment/ground_grass_small.png" type="Texture" id=6]
 [ext_resource path="res://GFX/Environment/ground_sand_small.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Environment/ground_snow_small.png" type="Texture" id=8]
 
 [node name="Platforms" type="Node2D" index="0"]
 
@@ -167,7 +168,6 @@ polygon = PoolVector2Array( -83.6713, -50.1297, 85.0949, -50.3423, 94.2347, -46.
 
 [node name="Ground_Sand_Small" type="Sprite" parent="." index="6"]
 
-editor/display_folded = true
 position = Vector2( 568.234, 443.024 )
 texture = ExtResource( 7 )
 __meta__ = {
@@ -193,9 +193,8 @@ polygon = PoolVector2Array( -83.6713, -50.1297, 85.0949, -50.3423, 94.2347, -46.
 
 [node name="Ground_Snow_Small" type="Sprite" parent="." index="7"]
 
-editor/display_folded = true
 position = Vector2( 568.234, 698.065 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 __meta__ = {
 "_edit_group_": true
 }

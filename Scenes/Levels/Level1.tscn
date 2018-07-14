@@ -1,14 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/PlatformTiles.tres" type="TileSet" id=3]
+[ext_resource path="res://Scenes/Platforms.tres" type="TileSet" id=3]
+[ext_resource path="res://Scenes/SpikesBottom.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/SpikesTop.tscn" type="PackedScene" id=5]
 
 [node name="Level1" type="Node2D" index="0"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 715.313, 791.759 )
+position = Vector2( 417.889, 1359.54 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "collision" ]
 
 [node name="Camera2D" parent="Player" index="2" instance=ExtResource( 2 )]
@@ -23,7 +25,7 @@ _sections_unfolded = [ "Drag Margin", "Limit", "Offset", "Smoothing" ]
 
 [node name="TileMap" type="TileMap" parent="." index="1"]
 
-position = Vector2( -419.42, 1.26905 )
+position = Vector2( -0.483398, 0.686279 )
 mode = 0
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 64, 64 )
@@ -36,11 +38,45 @@ cell_clip_uv = false
 collision_use_kinematic = false
 collision_friction = 1.0
 collision_bounce = 0.0
-collision_layer = 1
+collision_layer = 2
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 64, 5, 0, 196663, 1, 0, 327724, 1, 0, 327748, 1, 0, 393246, 5, 0, 524323, 1, 0, 589847, 1, 0, 589876, 5, 0, 655418, 1, 0, 852012, 1, 0, 852041, 1, 0, 917519, 1, 0, 983106, 5, 0, 1048601, 5, 0, 1114146, 1, 0, 1245245, 5, 0, 1310770, 1, 0, 1376274, 1, 0, 1441864, 1, 0, 1572891, 1, 0, 1638439, 1, 0, 1703986, 5, 0, 1769532, 1, 0 )
-_sections_unfolded = [ "Cell" ]
+tile_data = PoolIntArray( -196601, 1, 0, -196595, 1, 0, -196584, 5, 0, 31, 5, 0, 196645, 5, 0, 196674, 3, 0, 393260, 1, 0, 524367, 7, 0, 589882, 3, 0, 655398, 5, 0, 851999, 5, 0, 983091, 7, 0, 983109, 3, 0, 1179673, 5, 0, 1245243, 3, 0, 1310753, 5, 0, 1441869, 3, 0, 1507333, 1, 0, 1507340, 1, 0, 1507347, 1, 0, 1507366, 1, 0, 1638451, 5, 0, 1704007, 7, 0, 1900608, 7, 0, 2097207, 3, 0, 2359325, 5, 0, 2359332, 5, 0, 2359339, 5, 0, 2359346, 5, 0, 2555928, 5, 0, 2752523, 1, 0, 2752529, 1, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="Spikes" type="Node2D" parent="." index="2"]
+
+position = Vector2( 3645.91, 1209.52 )
+rotation = 0.0605936
+
+[node name="SpikesBottom" parent="Spikes" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 1468.41, -673.639 )
+rotation = -0.0686308
+
+[node name="SpikesBottom2" parent="Spikes" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( -297.641, -116.774 )
+
+[node name="SpikesTop" parent="Spikes" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( -558.168, -816.194 )
+rotation = -0.0605936
+
+[node name="SpikesTop2" parent="Spikes" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 84.2246, -663.901 )
+rotation = -0.0605936
+
+[node name="SpikesTop3" parent="Spikes" index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 576.967, -1077.04 )
+rotation = -0.0605936
+
+[node name="SpikesTop4" parent="Spikes" index="5" instance=ExtResource( 5 )]
+
+position = Vector2( 13.2769, 817.744 )
+rotation = -0.0605936
 
 
