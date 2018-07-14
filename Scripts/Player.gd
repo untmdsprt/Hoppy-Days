@@ -30,7 +30,7 @@ func fall(delta):
 		motion.y += GRAVITY * delta
 
 	if position.y > world_limit:
-		get_parent().end_game()
+		get_node(Global.GameState).end_game()
 
 func run():
 	if Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left"):
