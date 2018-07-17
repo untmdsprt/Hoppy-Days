@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scripts/SpikesTop.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Hazards.gd" type="Script" id=1]
 [ext_resource path="res://GFX/Environment/spikes_top.png" type="Texture" id=2]
 
-[node name="SpikesTop" type="Area2D" index="0"]
+[node name="SpikesTop" type="Area2D"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -31,6 +31,6 @@ visible = false
 build_mode = 0
 polygon = PoolVector2Array( -47.6533, 26.0464, -33.9278, -26.9684, 32.8835, -27.2241, 46.5453, 26.035 )
 
-[connection signal="body_entered" from="." to="." method="_on_SpikesTop_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 
 
