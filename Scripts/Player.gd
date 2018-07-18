@@ -8,6 +8,8 @@ const JUMP_SPEED = -1700
 var motion = Vector2()
 export var world_limit = 3260
 
+func _ready():
+	Global.Player = self
 
 func update_motion(delta):
 	fall(delta)
