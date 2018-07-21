@@ -38,7 +38,7 @@ func fall(delta):
 		motion.y += GRAVITY * delta
 
 	if position.y > world_limit:
-		get_node(Global.GameState).end_game()
+		Global.GameState.end_game()
 
 
 func run():
