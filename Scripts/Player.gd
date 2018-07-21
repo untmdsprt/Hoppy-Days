@@ -4,6 +4,7 @@ const SPEED = 750
 const GRAVITY = 3600
 const UP = Vector2(0, -1)
 const JUMP_SPEED = -1700
+const JUMP_BOOST = 2
 
 var motion = Vector2()
 export var world_limit = 3260
@@ -54,6 +55,10 @@ func jump():
 	if is_on_floor() and Input.is_action_pressed("ui_up"):
 		motion.y = JUMP_SPEED
 		Global.jump_SFX.play()
+		
+
+func boost():
+	motion.y = JUMP_SPEED * JUMP_BOOST
 
 
 func hurt():
