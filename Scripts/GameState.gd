@@ -44,6 +44,14 @@ func life_up():
 	lives += 1
 	update_GUI()
 	animate_GUI("LifePulse")
+	
+func lives_left():
+	Global.GameState.lives -= 1
+	update_GUI()
+	if Global.GameState.lives <= -1:
+		end_game()
+	else:
+		Global.Player.position = $StartPosition.position
 
 
 func end_game():
