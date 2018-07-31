@@ -11,7 +11,7 @@ func _ready():
 	Global.GameState = self
 	lives = starting_lives
 	update_GUI()
-	
+
 
 func update_GUI():
 	GUI.update_GUI(coins, lives)
@@ -38,13 +38,14 @@ func coin_up():
 	var multiple_of_coin_target = (coins % coin_target) == 0
 	if multiple_of_coin_target:
 		life_up()
-		
-		
+
+
 func life_up():
 	lives += 1
 	update_GUI()
 	animate_GUI("LifePulse")
-	
+
+
 func lives_left():
 	Global.GameState.lives -= 1
 	update_GUI()
@@ -57,4 +58,10 @@ func lives_left():
 func end_game():
 	get_tree().change_scene(Global.GameOver)
 
+
+func win_game():
+	get_tree().change_scene(Global.Victory)
  
+
+func _on_Portal_body_entered(body):
+	win_game()
