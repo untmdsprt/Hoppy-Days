@@ -33,8 +33,10 @@ func update_animation(motion):
 
 
 func fall(delta):
-	if is_on_floor() or is_on_ceiling():
+	if is_on_floor():
 		motion.y = 0
+	elif is_on_ceiling(): # Forcing bunny to drop instead of walking on the ceiling.
+		motion.y = GRAVITY * delta
 	else:
 		motion.y += GRAVITY * delta
 
